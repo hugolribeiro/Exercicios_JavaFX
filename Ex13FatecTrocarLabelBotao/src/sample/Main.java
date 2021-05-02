@@ -28,23 +28,18 @@ public class Main extends Application {
         gridPane.add(labelTexto,17,4);
 
         button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                if (labelTexto.getText() == "Texto antigo"){
-                    labelTexto.setText("Botão apertado");
-                }
+        @Override
+        public void handle(ActionEvent actionEvent) {
+            if (labelTexto.getText().equals("Texto antigo")){
+                labelTexto.setText("Botão apertado");
             }
-        });
-
-
-
+        }
+    });
         Scene scn = new Scene(gridPane, 600, 275);
         stage.setScene(scn);
         stage.setTitle("Teste de Eventos");
         stage.show();
-
     }
-
     public static void main(String[] args) {
         launch(args);
     }
